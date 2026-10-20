@@ -29,9 +29,9 @@ Podrobný popis architektury je v [docs/ARCHITEKTURA.md](docs/ARCHITEKTURA.md).
 | Člen | Role | Zodpovídá za |
 |---|---|---|
 | **Jakub Macura** | vedoucí týmu, správce architektury | návrh architektury a datových typů, rozdělení úkolů, koordinace, slučování pull requestů do `main`, sjednocení záznamu testů, kontrola dokumentace a prezentace |
-| **Filip** | hlavní vývojář | implementace jádra programu, technické detaily kódu, code review |
-| **Bojdan** | vývojář | vstupenky a práce se soubory |
-| **Saša** | vývojář, dokumentace | rozšíření programu, uživatelská a vývojářská dokumentace, prezentace |
+| **Filip Dvorský** | hlavní vývojář | implementace jádra programu, technické detaily kódu, code review |
+| **Bojdan Bogdan** | hlavní vývojář | vstupenky a práce se soubory |
+| **Saša Borunský** | vývojář, dokumentace | rozšíření programu, uživatelská a vývojářská dokumentace, prezentace |
 
 ## Rozdělení práce
 
