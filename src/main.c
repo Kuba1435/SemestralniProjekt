@@ -36,3 +36,54 @@ int main(void)
     printf("Konec programu.\n");
     return 0;
 }
+
+
+//docasnej testovaci program pro vse co udelal sikovnej filipek (input.c, interpreter,vstupenky)
+//spusteni ve stylu:  gcc -Wall -Wextra -I include src/main.c src/festival.c src/input.c src/interpret.c src/vstupenky.c src/program.c -o festival_test
+//.\festival_test.exe
+
+/*
+#include <stdio.h>
+#include "festival.h"
+#include "interpret.h"
+#include "vstupenky.h"
+#include "program.h"
+#include "input.h"
+
+int main(void)
+{
+    Festival f;
+    int volba;
+    
+    festival_init(&f);
+    
+    printf("--- TESTOVACI SPUSTENI: KOMPLETNI MODULY ---\n");
+    
+    while (1) {
+        printf("\n=== HLAVNI TESTOVACI MENU ===\n");
+        printf("1) Sprava interpretu\n");
+        printf("2) Sprava programu (sceny a vystoupeni)\n");
+        printf("3) Sprava vstupenek\n");
+        printf("0) Ukoncit testovani\n");
+        
+        if (!nacti_cislo("Vyberte modul pro testovani: ", 0, 3, &volba)) {
+            break; 
+        }
+        
+        if (volba == 0) {
+            break;
+        } else if (volba == 1) {
+            menu_interpreti(&f);
+        } else if (volba == 2) {
+            menu_program(&f);
+        } else if (volba == 3) {
+            menu_vstupenky(&f);
+        }
+    }
+    
+    festival_uvolni(&f);
+    
+    printf("Testovaci program uspesne skoncil.\n");
+    return 0;
+}
+*/
