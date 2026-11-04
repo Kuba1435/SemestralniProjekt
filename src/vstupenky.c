@@ -1,6 +1,6 @@
 /*
  * vstupenky.c - kapacita a prodej vstupenek
- * Vlastnik: Filip (HOTOVO)
+ * Vlastnik: Bojdan
  */
 #include <stdio.h>
 #include "vstupenky.h"
@@ -8,37 +8,43 @@
 
 Vysledek vstupenky_nastav_kapacitu(Festival *f, int kapacita)
 {
-    if (kapacita < 0) {
+    if (f == NULL || kapacita < 0) {
         return CHYBA_VSTUP;
     }
     if (kapacita < f->prodano) {
         return CHYBA_KAPACITA;
     }
-    
+
     f->kapacita = kapacita;
     return OK;
 }
 
 Vysledek vstupenky_prodej(Festival *f, int pocet)
 {
-    if (pocet <= 0) {
+    if (f == NULL || pocet <= 0) {
         return CHYBA_VSTUP;
     }
     if (pocet > vstupenky_zbyva(f)) {
         return CHYBA_KAPACITA;
     }
-    
+
     f->prodano += pocet;
     return OK;
 }
 
 int vstupenky_zbyva(Festival *f)
 {
+    if (f == NULL) {
+        return 0;
+    }
     return f->kapacita - f->prodano;
 }
 
 void vstupenky_vypis_stav(Festival *f)
 {
+    if (f == NULL) {
+        return;
+    }
     printf("\n--- Stav obsazenosti ---\n");
     printf("Kapacita festivalu: %d\n", f->kapacita);
     printf("Prodano vstupenek:  %d\n", f->prodano);
